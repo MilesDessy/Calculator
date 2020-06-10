@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Calulatrice</title>
+</head>
+<body>
+	<h1>Caculator</h1>
+			<div>
+				<label>First Number</label>
+				<input type="number" id="num1" placeholder="Enter your first number">
+			</div>
+			<br>
+			<div>
+				<label>Select your operator</label>
+					<select id="operatorSelect">
+						<option id="addition" value="+">Addition (+)</option>
+						<option id="soustraction"value="-">Substraction (-) </option>
+						<option id="division"value="/">Division (/) </option>
+						<option id="multiplication"value="x">Multiplication (x) </option>
+					</select>
+			</div>
+			<br>
+			<div>
+				<label>Second Number</label>
+				<input type="number" id="num2" placeholder="Enter your second number">
+			</div>
+			<br>
+			
+			<button onclick="calculate()">Calculate</button>
+			<button onclick="">Clear input fields</button>
+			
+			<script>
+				function calculate() {
+					const ope = document.getElementById("operatorSelect").value;
+					const x = document.getElementById("num1").value;
+					const y = document.getElementById("num2").value;
+					const xAsNumber = parseInt(x);
+					const yAsNumber = parseInt(y);
+						if (ope == "+"){
+								return alert(xAsNumber+yAsNumber);
+						}	else if (ope == "-"){
+								return alert(xAsNumber-yAsNumber);
+						}	else if (ope == "/"){
+								return alert(xAsNumber/yAsNumber);
+						}	else return alert(xAsNumber*yAsNumber);
+				}
+			</script>
+</body>
+</html>
